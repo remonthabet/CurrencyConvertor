@@ -1,9 +1,8 @@
 //
-//  AuthTargets.swift
+//  CurrencyEndPoint.swift
 //  Skeltone
 //
-//  Created by Saleh AlDhobaie on 03/03/2020.
-//  Copyright © 2020 Saleh AlDhobaie. All rights reserved.
+//  Created by Remon on 30/06/2021.
 //
 
 import Foundation
