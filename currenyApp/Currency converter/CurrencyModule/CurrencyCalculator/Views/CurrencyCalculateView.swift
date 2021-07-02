@@ -46,10 +46,9 @@ struct CurrencyCalculateView: View {
                 
                 HStack{
                     if text.count > 0{
-                        Text("\(Double(text.arToEnDigits)! * value)")
+                        Text("\(viewModel.calculateRate(value: Double(text.arToEnDigits)!, rate: value))")
                             .foregroundColor(.white)
                             .font(.custom("Roboto-Bold", size: Constants.largeFontSize))
-
                     }
                     Spacer()
                     Text("\(key)")

@@ -1,5 +1,5 @@
 //
-//  AuthRepository.swift
+//  AuthRepositoryImp.swift
 //  Skeltone
 //
 //  Created by Saleh AlDhobaie on 06/03/2020.
@@ -9,11 +9,19 @@
 import Foundation
 import Combine
 import Alamofire
-protocol CurrencyRepository {
+struct CurrencyRepository : CurrencyRepositoryProtocol {
     
-   
-    func fetchCurrencyRates() -> DataResponsePublisher<CurrencyModel>
-
+    //MARK: properties
+    fileprivate let provider: NetworkProviderProtocol
+    
+    //MARK: init
+    init(provider: NetworkProviderProtocol = DefaultNetworkProvider()) {
+        self.provider = provider
+    }
+    
+    //MARK: methods
+    func fetchCurrencyRates() -> DataResponsePublisher<CurrencyModel> {
+        let endpoint = CurrencyEndPoint.fetchCurrencyRates
+        return provider.get(type: CurrencyModel.self, endpoint: endpoint)
+    }
 }
-
-

@@ -13,14 +13,10 @@ protocol NetworkProviderProtocol: class {
 }
 
 final class DefaultNetworkProvider: NetworkProviderProtocol {
-    
     func get<T: Decodable>(type: T.Type,
                            endpoint : EndPointProtcol) -> DataResponsePublisher<T> {
-        
         return AF.request(endpoint.path, method: endpoint.method, parameters: (endpoint.body != nil) ? endpoint.body : nil, headers: (endpoint.headers != nil) ? endpoint.headers : nil).publishDecodable(type: T.self)
-
     }
-    
 }
 
 

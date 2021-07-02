@@ -14,8 +14,8 @@
 		D196FA30268BF65B004ED2C4 /* Currency_converterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D196FA2F268BF65B004ED2C4 /* Currency_converterUITests.swift */; };
 		D196FA41268BF6A2004ED2C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D196FA40268BF6A2004ED2C4 /* LaunchScreen.storyboard */; };
 		D196FA46268BF6ED004ED2C4 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D196FA45268BF6ED004ED2C4 /* Colors.xcassets */; };
-		D196FA65268BFC65004ED2C4 /* CurrencyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D196FA56268BFC65004ED2C4 /* CurrencyRepository.swift */; };
-		D196FA66268BFC65004ED2C4 /* CurrencyRepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D196FA57268BFC65004ED2C4 /* CurrencyRepositoryImp.swift */; };
+		D196FA65268BFC65004ED2C4 /* CurrencyRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D196FA56268BFC65004ED2C4 /* CurrencyRepositoryProtocol.swift */; };
+		D196FA66268BFC65004ED2C4 /* CurrencyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D196FA57268BFC65004ED2C4 /* CurrencyRepository.swift */; };
 		D196FA6B268BFC65004ED2C4 /* NetworkingLayerCombine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D196FA5D268BFC65004ED2C4 /* NetworkingLayerCombine.swift */; };
 		D196FA6D268BFC65004ED2C4 /* EndPointProtcol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D196FA60268BFC65004ED2C4 /* EndPointProtcol.swift */; };
 		D196FA71268BFC65004ED2C4 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D196FA64268BFC65004ED2C4 /* AppEnvironment.swift */; };
@@ -64,8 +64,8 @@
 		D196FA31268BF65B004ED2C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D196FA40268BF6A2004ED2C4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D196FA45268BF6ED004ED2C4 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		D196FA56268BFC65004ED2C4 /* CurrencyRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyRepository.swift; sourceTree = "<group>"; };
-		D196FA57268BFC65004ED2C4 /* CurrencyRepositoryImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyRepositoryImp.swift; sourceTree = "<group>"; };
+		D196FA56268BFC65004ED2C4 /* CurrencyRepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyRepositoryProtocol.swift; sourceTree = "<group>"; };
+		D196FA57268BFC65004ED2C4 /* CurrencyRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyRepository.swift; sourceTree = "<group>"; };
 		D196FA5D268BFC65004ED2C4 /* NetworkingLayerCombine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingLayerCombine.swift; sourceTree = "<group>"; };
 		D196FA60268BFC65004ED2C4 /* EndPointProtcol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointProtcol.swift; sourceTree = "<group>"; };
 		D196FA64268BFC65004ED2C4 /* AppEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
@@ -199,8 +199,8 @@
 		D196FA55268BFC65004ED2C4 /* CurrencyRepo */ = {
 			isa = PBXGroup;
 			children = (
-				D196FA56268BFC65004ED2C4 /* CurrencyRepository.swift */,
-				D196FA57268BFC65004ED2C4 /* CurrencyRepositoryImp.swift */,
+				D196FA56268BFC65004ED2C4 /* CurrencyRepositoryProtocol.swift */,
+				D196FA57268BFC65004ED2C4 /* CurrencyRepository.swift */,
 			);
 			path = CurrencyRepo;
 			sourceTree = "<group>";
@@ -462,7 +462,7 @@
 				D196FA6D268BFC65004ED2C4 /* EndPointProtcol.swift in Sources */,
 				D196FA71268BFC65004ED2C4 /* AppEnvironment.swift in Sources */,
 				D196FAFC268E373E004ED2C4 /* CurrencyCalculateView.swift in Sources */,
-				D196FA65268BFC65004ED2C4 /* CurrencyRepository.swift in Sources */,
+				D196FA65268BFC65004ED2C4 /* CurrencyRepositoryProtocol.swift in Sources */,
 				D196FA7F268BFD6B004ED2C4 /* CurrencyEndPoint.swift in Sources */,
 				D196FA6B268BFC65004ED2C4 /* NetworkingLayerCombine.swift in Sources */,
 				D196FAD6268D45E9004ED2C4 /* Extension.swift in Sources */,
@@ -472,7 +472,7 @@
 				D196FADE268E35AB004ED2C4 /* Constants.swift in Sources */,
 				D196FA13268BF658004ED2C4 /* Currency_converterApp.swift in Sources */,
 				D196FAF0268E36ED004ED2C4 /* CurrencyModel.swift in Sources */,
-				D196FA66268BFC65004ED2C4 /* CurrencyRepositoryImp.swift in Sources */,
+				D196FA66268BFC65004ED2C4 /* CurrencyRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

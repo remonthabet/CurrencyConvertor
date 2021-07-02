@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct CurrencyListView: View {
+    
     @StateObject var viewModel = CurrencyListViewModel()
 
-    
     var body: some View {
         NavigationView{
             ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
@@ -61,7 +61,7 @@ struct CurrencyListView: View {
                 }.offset(y: UIScreen.main.bounds.height / 3 - 60) // list position
                 .padding(.bottom, UIScreen.main.bounds.height / 3 - 55)
                 
-                if viewModel.isloading{
+                if viewModel.isApiLoading{
                     ZStack(){
                         Color(.systemBackground).ignoresSafeArea().opacity(0.2)
                         ProgressView().progressViewStyle(CircularProgressViewStyle.init(tint: .gray)).scaleEffect(2)
@@ -70,8 +70,8 @@ struct CurrencyListView: View {
                 
             }).navigationBarHidden(true)
             
-        }.alert(isPresented: $viewModel.showAlert, content: {
-            Alert(title: Text("Alert"), message: Text("\(viewModel.alertMessage)"), dismissButton: .cancel())
+        }.alert(isPresented: $viewModel.errorExist, content: {
+            Alert(title: Text("Alert"), message: Text("\(viewModel.errorMessage)"), dismissButton: .cancel())
         })
         .accentColor(.white)
         .onAppear(){

@@ -4,14 +4,19 @@
 //
 //  Created by Remon on 30/06/2021.
 //
-
+import Alamofire
 import XCTest
+import Combine
 @testable import Currency_converter
+
 
 class Currency_converterTests: XCTestCase {
 
+
+
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+
     }
 
     override func tearDownWithError() throws {
